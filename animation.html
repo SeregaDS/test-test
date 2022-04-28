@@ -21,5 +21,59 @@
 
     <h4 class="title">Анимация при <em>hover</em></h4>
     <div class="box"></div>
+
+    <br /><br /><br />
+
+    <form action="javascript:void(0);">
+      <select class="select-custom">
+        <optgroup label="Developer">
+          <option value="frontend">Frontend</option>
+        </optgroup>
+        <optgroup label="Base skills">
+          <option value="html" selected>HTML</option>
+          <option value="css">CSS</option>
+          <option value="js">JavaScript</option>
+        </optgroup>
+        <optgroup label="Frameworks" disabled>
+          <option value="vue">Vue</option>
+          <option value="react">React + GraphQL</option>
+          <option value="angular">Angular</option>
+        </optgroup>
+      </select>
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </form>
+    <br /><br /><br /><br />
+
+    <form action="javascript:void(0);" method="POST">
+      <label>
+        <span>Имя</span>
+        <input type="text" name="name" placeholder="Имя" />
+      </label>
+      <label>
+        <span>Почта</span>
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="Электронная почта"
+        />
+      </label>
+      <label>
+        <span>Пароль</span>
+        <input
+          type="password"
+          name="password"
+          required
+          placeholder="Пароль от 3 до 5 символов"
+          pattern=".{3,5}"
+          title="от 3 до 5 символов"
+        />
+      </label>
+      <div class="buttons">
+        <button type="submit">отправить</button>
+        <button type="reset">обновить</button>
+      </div>
+    </form>
   </body>
 </html>

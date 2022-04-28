@@ -1,0 +1,30 @@
+/* 1x - значение по умолчанию, изображение 360x220 */
+.card {
+  max-width: 324px;
+  height: 198px;
+  margin: 1rem auto;
+  box-shadow: 20px 10px 20px hsla(0, 0%, 0%, 0.5);
+  background-image: url("https://ac.goit.global/img/bg@1x.jpg"),
+    linear-gradient(#eee, #888);
+  background-size: cover;
+}
+
+/* 2x-экраны, изображение 720x440 */
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 193dpi),
+  screen and (min-resolution: 2dppx) {
+  .card {
+    background-image: url("https://ac.goit.global/img/bg@2x.jpg"),
+      linear-gradient(#eee, #888);
+  }
+}
+
+/* 3x-экраны, изображение 1080x660 */
+@media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 288dpi),
+  screen and (min-resolution: 3dppx) {
+  .card {
+    background-image: url("https://ac.goit.global/img/bg@3x.jpg"),
+      linear-gradient(#eee, #888);
+  }
+}

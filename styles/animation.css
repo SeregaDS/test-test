@@ -110,3 +110,141 @@ body {
 .box:hover {
   animation: cursorMoveOut 0.8s forwards;
 }
+
+/* custom checkbox select */
+
+* {
+  box-sizing: border-box;
+}
+form {
+  width: 28rem;
+  margin: 1rem;
+  padding: 2rem 1rem;
+  font-size: 1rem;
+  text-align: center;
+  box-shadow: 0px 4px 4px hsla(0, 0%, 0%, 0.15);
+}
+button {
+  display: block;
+  margin: 0 auto 1rem;
+}
+.select-custom {
+  /* 1 - скрой стили по умолчанию */
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+
+  /* 2 - задай размеры и положение */
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 1rem;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+
+  /* оформи border */
+  border: 1px solid #aaa;
+  border-radius: 0.5em;
+
+  /* оформи текст */
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 700;
+  color: #444;
+  line-height: 1.3;
+
+  /* оформи тень от блока */
+  box-shadow: 0 1px 0 1px hsla(0, 0%, 0%, 0.04);
+
+  /* оформи фон и фоновое изображение */
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%, 0 0;
+  background-size: 0.65rem auto, 100%;
+
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='16px' height='16px' viewBox='0 0 16 16' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' preserveAspectRatio='xMidYMid'%3e%3cg%3e%3cpolygon points='0,0 16,0 8,16' fill='blue'/%3e%3c/g%3e%3c/svg%3e"),
+    linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+}
+
+/* !форма с проверкой валидности в html */
+
+form {
+  max-width: 360px;
+  margin: auto;
+  padding: 1rem 2rem 1rem 1rem;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 6px 3px hsla(0, 0%, 0%, 0.2);
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+.buttons,
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+label {
+  margin-bottom: 1.5rem;
+}
+label span {
+  opacity: 0.6;
+}
+input {
+  border: 2px solid lavender;
+  padding: 4px;
+  border-radius: 0.25rem;
+}
+button {
+  padding: 0.5rem 1.75rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  opacity: 0.6;
+  background-color: gray;
+  color: #fff;
+}
+button:hover {
+  background-color: gray;
+  opacity: 1;
+}
+
+/* placeholder */
+input::placeholder {
+  /* Напиши код под этой строкой; */
+  color: rebeccapurple;
+}
+
+/* focus-within */
+label:focus-within span {
+  opacity: 1;
+}
+form:focus-within button[type="submit"] {
+  opacity: 0.6;
+  background-color: seagreen;
+}
+form:focus-within button[type="reset"] {
+  opacity: 0.6;
+  background-color: crimson;
+}
+form:focus-within {
+  box-shadow: 1px 1px 2px 2px hsla(0, 0%, 0%, 0.3);
+}
+
+/* valid */
+form:valid button {
+  color: #fff;
+  pointer-events: none;
+}
+
+/* combination  */
+form:focus-within:valid button {
+  opacity: 1;
+}
+input:not(:placeholder-shown):valid {
+  /* Напиши код под этой строкой; */
+  border-color: seagreen;
+}
+input:not(:placeholder-shown):invalid {
+  /* Напиши код под этой строкой; */
+  border-color: crimson;
+}
